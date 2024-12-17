@@ -7,7 +7,7 @@ function displayTemperature(response) {
 }
 
 function search(event) {
-  event.preventDefault();
+  event.preventDefault(); //reloading the page
   let searchInputElement = document.querySelector("#search-input");
   let city = searchInputElement.value;
 
