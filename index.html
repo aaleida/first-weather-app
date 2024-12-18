@@ -25,15 +25,19 @@
         <main>
             <div class="current-weather">
                 <div>
-                    <h1 class="current-city" id="current-city">Paris</h1>
+                    <h1 class="current-city" id="current-city">Where are you?</h1>
                     <p class="current-details">
-                        <span id="current-date"></span>, <span id="description"></span>  <br />
+                        <span id="current-date"></span>
+                        <span id="description"></span> <br />
                         Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind-speed"></strong>
                     </p>
                 </div>
                 <div class="current-temperature">
-                    <span class="current-temperature-icon">☀️</span><span class="current-temperature-value"
-                        id="current-temperature"></span><span class="current-temperature-unit">°C</span>
+                    <span id="icon">
+                        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" class="weather-app-icon" />
+                    </span>
+                    <span class="current-temperature-value" id="current-temperature"></span>
+                    <span class="current-temperature-unit">°C</span>
                 </div>
             </div>
         </main>
