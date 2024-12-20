@@ -12,7 +12,7 @@ function displayTemperature(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = temperature;
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
 }
 
 function search(event) {
@@ -24,6 +24,31 @@ function search(event) {
 
   axios.get(apiUrl).then(displayTemperature);
 }
+
+function displayForecast () {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml = 
+      forecastHtml + `
+        <div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+            <div class="weather-forecast-icon">☀️</div>
+            <div class="weather-forecast-temperatures">
+                <div class="weather-forecast-temperature"><strong>15°</strong></div>
+                <div class="weather-forecast-temperature">9°</div>
+            </div>
+        </div>
+      `;
+  });
+  
+forecastElement.innerHTML = forecastHtml;
+};
+
+displayForecast();
 
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -59,3 +84,5 @@ let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
+
+
