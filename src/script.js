@@ -28,7 +28,7 @@ function search(event) {
 function displayForecast () {
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
 
   days.forEach(function (day) {
@@ -46,7 +46,7 @@ function displayForecast () {
   });
   
 forecastElement.innerHTML = forecastHtml;
-};
+}
 
 displayForecast();
 
