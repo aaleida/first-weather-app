@@ -36,7 +36,7 @@ function displayForecast () {
       forecastHtml + `
         <div class="weather-forecast-day">
             <div class="weather-forecast-date">${day}</div>
-            <div class="weather-forecast-icon">☀️</div>
+            <span class="weather-forecast-icon">☀️</span>
             <div class="weather-forecast-temperatures">
                 <div class="weather-forecast-temperature"><strong>15°</strong></div>
                 <div class="weather-forecast-temperature">9°</div>
@@ -84,5 +84,3 @@ let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
-
-
